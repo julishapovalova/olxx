@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test filter functionality" parallel="tests" thread-count="1" data-provider-thread-count="1">
+
+    <test name="User could filter car category">
+        <classes>
+            <class name="com.olx.car.filter.CategoryFilterTest"/>
+        </classes>
+    </test>
+    <test name="Default filter">
+    <classes>
+        <class name="com.olx.car.filter.DefaultFilterTest"/>
+    </classes>
+</test>
+    <test name="Miliage filter">
+        <classes>
+            <class name="com.olx.car.filter.MileageFilterTest"/>
+        </classes>
+    </test>
+    <test name="Price filter">
+        <classes>
+            <class name="com.olx.car.filter.PriceFilterTest"/>
+        </classes>
+    </test>
+    <test name="Transmission filter">
+        <classes>
+            <class name="com.olx.car.filter.TransmissionTest"/>
+        </classes>
+    </test>
+    <test name="User could fsort car">
+        <classes>
+            <class name="com.olx.car.sort.SortCarTest"/>
+        </classes>
+    </test>
+</suite>

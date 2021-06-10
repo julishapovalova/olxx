@@ -1,0 +1,21 @@
+<configuration scan="true">
+    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <file>target/log-${bySecond}.log</file>
+        </rollingPolicy>
+
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.olx.pages" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
